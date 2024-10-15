@@ -8,4 +8,4 @@ I would probably work through these in the order they are presented
 
 
 * Note to self: Find a good pointer tutorial
-
+* Add a git tutorial
