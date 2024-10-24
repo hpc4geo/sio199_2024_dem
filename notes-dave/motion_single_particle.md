@@ -126,7 +126,7 @@ $$
 
 The angular velocity $\omega$ of the satellite is given by 
 $$
-	\omega = \sqrt{\frac{G m_e}{x}}.
+	\omega = \sqrt{\frac{G m_e}{R^3}}.
 $$
 The orbital period $T$ is given by 
 $$
@@ -244,11 +244,42 @@ I \frac{d \omega}{dt} =
    \end{cases}
 $$
 
-The surface the ball bounces on has a normal $\hat{\mathbf n} = (0, 1)$.
+The surface the ball bounces on has a normal $\hat{\mathbf n} = (0, 1)$ and tangent $\hat{\mathbf s} = (-1, 0)$.
 
+
+$$
+\tau_\text{col} = \mathbf R_C \times \mathbf F_s
+$$
+and
+$$
+	\mathbf R_C = (r - \tfrac{1}{2} \delta_{nco}) (-\hat{\mathbf n})
+$$
+and $\delta_{nco}$ is the "normal contact overlap" which we take as 
+$$
+\delta_{nco} = 2r - |y_w - y(t)| > 0.
+$$
+The time rate of change of the overlap is then
+$$
+\dot{\delta}_{nco} = - |0 - \dot{y}(t)|.
+$$
+
+
+The velocity vector tangent to the contact surface is given by
 $$
 	\mathbf v_\text{tangential} = \mathbf v - (\mathbf v \cdot \mathbf n) \mathbf n
 $$
+The tangential speed (sliding rate) is then
+$$
+	\dot{s} = \mathbf v_\text{tangential} \cdot \hat{\mathbf s}.
+$$
+
+Assume Coloumb Sliding, then
+$$
+	\mathbf F_s = \mu \| \mathbf F_N \| \hat{\mathbf s},
+$$
+where $\mu$ is the apparent friction and $\mathbf F_n$ is
+$$
+\mathbf F_n = (-k \delta_{nco} + c \dot{\delta}_{nco}) \hat{\mathbf n}
+$$
 
 -->
-
